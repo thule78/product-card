@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #262626;
+    display: gird;
+    place-items: center;
+}
+
+.card-wrapper {
+    width: 50rem;
+    height: 70rem;
+    background: #ccc;
+    padding: 0 10rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    width: 30rem;
+    height: 55rem;
+    background: #eee;
+    border-radius: 2.5rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.7);
+
+}
+
+.card-top {
+    width: 100%;
+    height: 50%;
+    background: #2151a1;
+    padding: 3rem;
+    border-radius: 2.5rem 2.5rem 0 0;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container.change .card-top {
+    background-color: #c02244;
+}
+
+/* pepsi logo with css-art */
+.pepsi {
+    top: -0.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    background-color: #2151a1;
+    border: 0.4rem solid #fefefe;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: rotate(-40deg);
+}
+
+    .pepsi::before {
+        position: absolute;
+        content: "";
+        width: 16rem;
+        height: 16rem;
+        top: -12rem;
+        left: -6.5rem;
+        background-color: #fff;
+        border-radius: 3.6rem;
+        transform: rotate(20deg);
+    }
+
+    .pepsi::after {
+        position: absolute;
+        content: "";
+        width: 10rem;
+        height: 10rem;
+        top: -5.6rem;
+        left: -2.4rem;
+        background-color: #eb1834;
+        border-radius: 50%;
+    }
+
+.top-text {
+    color: #fff;
+}
+
+.top-text h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.top-text p {
+    width: 17rem;
+    letter-spacing: 0.1rem;
+}
+
+.product-1 {
+    width: 25rem;
+    position: absolute;
+    top: 1.5rem;
+    right: -10rem;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container.change .product-1 {
+    transform: translateX(-50rem);
+}
+.product-2 {
+    width: 25rem;
+    position: absolute;
+    top: 1.5rem;
+    right: -45rem;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container.change .product-2 {
+    right: -10rem;
+}
+
+.card-bottom {
+    width: 100%;
+    height: 50%;
+    padding: 2rem 3rem;
+}
+
+.card-bottom h1 {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #333;
+    margin-bottom: 0.6rem;
+}
+
+.badge {
+    position: absolute;
+    top: 30rem;
+    right: 5rem;
+    width: 3.5rem;
+    height: 1.6rem;
+    background:palevioletred;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.card-bottom h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+
+.rate {
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.rate i:last-child {
+    opacity: 0.4;
+}
+
+.size {
+    margin-bottom: 2rem;
+}
+
+.size h4 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.3rem;
+}
+
+.sizes {
+    display: flex;
+}
+
+.sizes span {
+    font-size: 1.3rem;
+    margin-right: 1.5rem;
+}
+
+.sizes span:nth-child(2) {
+    width: 2rem;
+    height: 2rem;
+    background: palevioletred;
+    color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.color h4 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.colors {
+    display: flex;
+}
+
+.color-1, .color-2 {
+    width: 2rem;
+    height: 2rem;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-1 {
+    background: #1c477a;
+    margin-right: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(28, 71, 122, 0.2);
+}
+
+.color-2 {
+    background: #c02244;
+    box-shadow:0 1rem 2rem rgba(192, 34, 68, 0.3) ;
+}
+
+.price {
+    width: 12rem;
+    height: 4rem;
+    background: #1c477a;
+    color: #fff;
+    border-radius: 0.5rem;
+    position: absolute;
+    right: -1rem;
+    bottom: 4rem;
+    box-shadow: 0 1rem 2rem rgba(28, 71, 122, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container.change .price {
+    background-color: #c02244;
+}
+
+.price span {
+    font-size: 2rem;
+}
+
+.price span:first-child {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+
+.price span:last-child {
+    font-weight: bold;
+}
